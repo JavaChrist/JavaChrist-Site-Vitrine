@@ -46,7 +46,20 @@ body {
   font-weight: 600;
   cursor: default;
   opacity: 0;
-  animation: slideRight 1s ease forwards;
+  animation: slideTop 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+.ai-badge {
+  position: absolute;
+  top: 0;
+  left: 450px;
+}
+
+.ai-badge img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
 }
 
 /* Debut navbar */
@@ -80,10 +93,16 @@ body {
   font-size: 60px;
   padding-bottom: 10px;
   color: #000000;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: 1s;
 }
 
 .sub-title span {
   color: #0ef;
+  opacity: 0;
+  animation: slideRight 3s ease forwards;
+  animation-delay: 2s;
 }
 
 .container {
@@ -325,6 +344,30 @@ body {
 }
 .btn-box:hover {
   box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan;
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 
 @keyframes slideLeft {

@@ -8,11 +8,17 @@
 }
 
 body {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: #f4f4f4;
   color: #333;
   font-family: Arial, sans-serif;
   overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
 }
 
 #rain-container {
@@ -64,7 +70,20 @@ body {
   font-weight: 600;
   cursor: default;
   opacity: 0;
-  animation: slideRight 1s ease forwards;
+  animation: slideTop 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+.ai-badge {
+  position: absolute;
+  top: 0;
+  left: 450px;
+}
+
+.ai-badge img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
 }
 
 /* Debut navbar */
@@ -105,10 +124,16 @@ body {
   font-size: 90px;
   line-height: 1;
   color: rgb(59, 57, 57);
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s;
 }
 
 .contact-text h2 span {
   color: #0ef;
+  opacity: 0;
+  animation: slideRight 4s ease forwards;
+  animation-delay: 2s;
 }
 .contact-text {
   margin-left: 30px;
@@ -270,18 +295,6 @@ form textarea {
   }
 }
 
-@keyframes slideLeft {
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
 @keyframes slideTop {
   0% {
     transform: translateY(100px);
@@ -291,6 +304,12 @@ form textarea {
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+@media (max-width: 1450px) {
+  .contact {
+    margin-top: 400px; /* Ajuste la marge pour les écrans entre 1450px et 1230px */
   }
 }
 
@@ -334,9 +353,58 @@ form textarea {
   .contact {
     display: grid;
     grid-template-columns: 1fr;
+    padding: 20px;
+    margin-top: 100px; /* Ajuste la marge pour les petits écrans */
+  }
+
+  .contact h2 {
+    font-size: 50px; /* Réduit la taille de la police pour les petits écrans */
   }
 
   .contact-text p {
-    margin-left: 20px;
+    margin-left: 0;
+    font-size: 16px; /* Réduit la taille de la police pour les petits écrans */
+  }
+
+  .contact-form form input,
+  .contact-form form textarea {
+    width: 100%; /* Assure que les champs de formulaire prennent toute la largeur */
+  }
+
+  .contact-icons {
+    justify-content: center; /* Centre les icônes de contact */
+  }
+
+  .contact-icons i {
+    margin: 10px; /* Réduit l'espacement entre les icônes */
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 10px; /* Réduit le padding pour les très petits écrans */
+  }
+
+  .contact h2 {
+    font-size: 40px; /* Réduit encore la taille de la police pour les très petits écrans */
+  }
+
+  .contact-text h4 {
+    font-size: 18px; /* Réduit la taille de la police pour les très petits écrans */
+  }
+
+  .contact-text p {
+    font-size: 14px; /* Réduit la taille de la police pour les très petits écrans */
+  }
+
+  .contact-form form input,
+  .contact-form form textarea {
+    padding: 10px; /* Réduit le padding des champs de formulaire */
+  }
+
+  .btn-box,
+  .contact-form form .send {
+    padding: 10px 40px; /* Réduit le padding des boutons */
+    font-size: 14px; /* Réduit la taille de la police des boutons */
   }
 }

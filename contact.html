@@ -21,100 +21,111 @@
   </head>
   <body>
     <div id="rain-container"></div>
-
-    <header class="header">
-      <div id="logo">
-        <img
-          src="/assets/logo/Logo-Bandeau-JavaChrist.png"
-          alt="Logo JavaChrist"
-          height="60px"
-        />
-      </div>
-      <nav class="navbar" id="nav-links">
-        <!-- Liens de navigation -->
-        <a href="accueil.html" style="--i: 1">Accueil</a>
-        <a href="info.html" style="--i: 2">Info</a>
-        <a href="service.html" style="--i: 3">Services</a>
-        <a href="projet.html" style="--i: 5">Projet</a>
-        <a href="contact.html" style="--i: 6">Contact</a>
-        <a href="#english.html" style="--i: 7">English</a>
-        <a href="login.html" style="--i: 8">Login</a>
-      </nav>
-
-      <!-- Icône hamburger -->
-      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-        <i class="bx bx-menu"></i>
-      </div>
-    </header>
-
-    <!-- Section "Contact" avec formulaire et informations de contact -->
-    <section class="contact" id="contact">
-      <div class="contact-text">
-        <!-- Informations de contact et liens sociaux -->
-        <h2>Contacter <span>Moi</span></h2>
-        <h4>Travaillons ensemble</h4>
-        <p>
-          Remplissez le formulaire ci-dessous pour nous faire parvenir vos
-          idées, projets ou questions. Nous avons hâte de voir comment nous
-          pouvons collaborer et réussir ensemble.
-        </p>
-        <div class="contact-list">
-          <li><i class="bx bx-send"></i> contact@javachrist.fr</li>
-          <li><i class="bx bxs-phone"></i> 0786105807</li>
-        </div>
-        <!-- Ajout du bouton Calendly ici -->
-        <a href="rdv.html" id="calendly-button" class="btn-box"
-          >Prendre rendez-vous</a
-        >
-        <div class="contact-icons">
-          <a href="https://twitter.com/Mis7erC" target="_blank" style="--i: 8"
-            ><i class="bx bxl-instagram"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/javachrist/"
-            target="_blank"
-            style="--i: 9"
-            ><i class="bx bxl-linkedin"></i
-          ></a>
-          <a
-            href="https://github.com/JavaChrist"
-            target="_blank"
-            style="--i: 10"
-            ><i class="bx bxl-github"></i
-          ></a>
-        </div>
-      </div>
-      <!-- Formulaire de contact -->
-      <div class="contact-form">
-        <form id="contact-form">
-          <input
-            type="text"
-            name="name"
-            placeholder="Entrez votre nom"
-            required
-            autocomplete="on"
+    <div class="main-content">
+      <header class="header">
+        <div id="logo">
+          <img
+            src="/assets/logo/Logo-Bandeau-JavaChrist.png"
+            alt="Logo JavaChrist"
+            height="60px"
           />
-          <input
-            type="email"
-            name="email"
-            placeholder="Entrez votre email"
-            required
-            autocomplete="on"
+        </div>
+        <div class="ai-badge">
+          <img
+            src="/assets/logo/google-ai-essentials.png"
+            alt="AI Trained"
+            class="ai-icon"
           />
-          <input type="text" name="subject" placeholder="Entrez votre sujet" />
-          <textarea
-            name="message"
-            cols="40"
-            rows="10"
-            placeholder="Entrez votre message"
-            required
-            autocomplete="on"
-          ></textarea>
-          <input type="submit" value="Envoyer" class="send" />
-        </form>
-      </div>
-    </section>
+        </div>
+        <nav class="navbar" id="nav-links">
+          <!-- Liens de navigation -->
+          <a href="accueil.html" style="--i: 1">Accueil</a>
+          <a href="info.html" style="--i: 2">Info</a>
+          <a href="service.html" style="--i: 3">Services</a>
+          <a href="projet.html" style="--i: 5">Projet</a>
+          <a href="contact.html" style="--i: 6">Contact</a>
+          <a href="#english.html" style="--i: 7">English</a>
+          <a href="login.html" style="--i: 8">Login</a>
+        </nav>
 
+        <!-- Icône hamburger -->
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+          <i class="bx bx-menu"></i>
+        </div>
+      </header>
+
+      <!-- Section "Contact" avec formulaire et informations de contact -->
+      <section class="contact" id="contact">
+        <div class="contact-text">
+          <!-- Informations de contact et liens sociaux -->
+          <h2>Contacter <span>Moi</span></h2>
+          <h4>Travaillons ensemble</h4>
+          <p>
+            Remplissez le formulaire ci-dessous pour nous faire parvenir vos
+            idées, projets ou questions. Nous avons hâte de voir comment nous
+            pouvons collaborer et réussir ensemble.
+          </p>
+          <div class="contact-list">
+            <li><i class="bx bx-send"></i> contact@javachrist.fr</li>
+            <li><i class="bx bxs-phone"></i> 0786105807</li>
+          </div>
+          <!-- Ajout du bouton Calendly ici -->
+          <a href="rdv.html" id="calendly-button" class="btn-box"
+            >Prendre rendez-vous</a
+          >
+          <div class="contact-icons">
+            <a href="https://twitter.com/Mis7erC" target="_blank" style="--i: 8"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/javachrist/"
+              target="_blank"
+              style="--i: 9"
+              ><i class="bx bxl-linkedin"></i
+            ></a>
+            <a
+              href="https://github.com/JavaChrist"
+              target="_blank"
+              style="--i: 10"
+              ><i class="bx bxl-github"></i
+            ></a>
+          </div>
+        </div>
+        <!-- Formulaire de contact -->
+        <div class="contact-form">
+          <form id="contact-form">
+            <input
+              type="text"
+              name="name"
+              placeholder="Entrez votre nom"
+              required
+              autocomplete="on"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Entrez votre email"
+              required
+              autocomplete="on"
+            />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Entrez votre sujet"
+            />
+            <textarea
+              name="message"
+              cols="40"
+              rows="10"
+              placeholder="Entrez votre message"
+              required
+              autocomplete="on"
+            ></textarea>
+            <input type="submit" value="Envoyer" class="send" />
+          </form>
+        </div>
+      </section>
+    </div>
     <footer class="footer">
       <p>&copy; 2024 JavaChrist. Tous droits réservés.</p>
       <div>
@@ -128,5 +139,6 @@
     </footer>
 
     <script src="contact.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

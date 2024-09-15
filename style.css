@@ -42,11 +42,23 @@ body {
   position: relative;
   font-size: 25px;
   color: #fff;
-  text-decoration: none;
   font-weight: 600;
   cursor: default;
   opacity: 0;
-  animation: slideRight 1s ease forwards;
+  animation: slideTop 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+.ai-badge {
+  position: absolute;
+  top: 0;
+  left: 450px;
+}
+
+.ai-badge img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
 }
 
 /* Debut navbar */
@@ -210,6 +222,18 @@ body {
 .license-link:hover {
   color: #fff;
   text-decoration: underline;
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 
 @keyframes slideRight {
