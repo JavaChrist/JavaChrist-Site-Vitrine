@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ededed;
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 20px;
+  background: rgba(7, 85, 91, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.logo {
+  position: relative;
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+
+/* Debut navbar */
+.navbar a {
+  display: inline-block;
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 0.3s;
+  opacity: 0;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+.navbar a:hover {
+  color: #0ef;
+}
+
+.hamburger {
+  display: none;
+}
+
+/* Style pour la navbar en mode desktop */
+.navbar {
+  display: flex;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 60px;
+  padding: 150px 0 10px; /* Ajoutez une marge en haut */
+  color: #000000;
+  opacity: 0;
+}
+
+.sub-title.animate {
+  animation: dynamicFadeIn 1.5s ease forwards; /* Utilisez la nouvelle animation */
+  animation-delay: 0.5s; /* Délai avant le début de l'animation */
+}
+
+.sub-title span {
+  color: #0ef;
+}
+/* Ajoutez ces styles à votre fichier CSS existant */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 100px auto 0; /* Ajoutez une marge en haut */
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-item button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #0ef;
+  border-radius: 50px;
+  font-size: 20px;
+  color: #0ef;
+  text-decoration: none;
+  margin: 20px 0;
+  transition: 0.5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+  background: #0ef;
+}
+
+.carousel-item button a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000000;
+  padding: 5px;
+}
+
+.carousel-item button:hover {
+  background: #0ef;
+  color: #081b29;
+  box-shadow: 0 0 20px #0ef;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-control.prev {
+  left: 10px;
+  color: rgb(0, 238, 255);
+  font-size: 50px;
+  background: none;
+}
+
+.carousel-control.next {
+  right: 10px;
+  color: rgb(0, 238, 255);
+  font-size: 50px;
+  background: none;
+}
+
+.footer {
+  background: rgba(7, 85, 91, 0.8);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer p {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px 0;
+  font-weight: 300;
+}
+
+.license-link {
+  flex: 1;
+  font-size: 16px;
+  color: #0ef;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-align: center;
+  width: 200px;
+}
+
+.license-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.home-sci {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-sci a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #0ef;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #0ef;
+  text-decoration: none;
+  margin: 30px 15px 30px;
+  transition: 0.5s ease;
+  opacity: 1;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+/* Liens reseau scociaux  */
+.home-sci a:hover {
+  background: #0ef;
+  color: #081b29;
+  box-shadow: 0 0 20px #0ef;
+}
+
+.btn-box {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #0ef;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #081b29;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 1;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
+  box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+}
+.btn-box:hover {
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes dynamicFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8) rotate(-10deg); /* Départ légèrement en dessous, plus petit et incliné */
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-10px) scale(1.1) rotate(5deg); /* Milieu légèrement au-dessus, plus grand et incliné dans l'autre sens */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0); /* Arrivée à la position normale */
+  }
+}
+
+@media (max-width: 1270px) {
+  .navbar {
+    display: none; /* Cache la navbar en mode mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Positionne juste sous le hamburger */
+    right: 20px; /* Aligne sur la droite, sous l'icône hamburger */
+    background: rgba(7, 85, 91, 0.8);
+    border-radius: 10px; /* Ajout d'un peu de style */
+    padding: 10px;
+    width: auto; /* La largeur s'adapte automatiquement à celle des liens */
+  }
+
+  .navbar a {
+    padding: 10px 20px;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+  }
+
+  /* Affiche l'icône hamburger en mode mobile */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 40px;
+    color: rgb(255, 106, 0);
+  }
+
+  .navbar.active {
+    display: flex;
+    align-items: center;
+    width: 160px;
+    padding: 0; /* Affiche la navbar lorsqu'elle a la classe 'active' */
+  }
+}
