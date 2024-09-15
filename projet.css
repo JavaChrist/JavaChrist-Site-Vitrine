@@ -77,19 +77,132 @@ body {
 .sub-title {
   text-align: center;
   font-size: 60px;
-  padding: 150px 0 10px; /* Ajoutez une marge en haut */
+  padding: 150px 0 10px;
   color: #000000;
-  opacity: 0;
-}
-
-.sub-title.animate {
-  animation: dynamicFadeIn 1.5s ease forwards; /* Utilisez la nouvelle animation */
-  animation-delay: 0.5s; /* Délai avant le début de l'animation */
+  position: relative;
+  overflow: hidden;
+  word-spacing: 20px; /* Augmente l'espace entre les mots */
 }
 
 .sub-title span {
-  color: #0ef;
+  display: inline-block;
+  animation: colorChange 8s infinite;
 }
+
+@keyframes colorChange {
+  0% {
+    color: #0ef;
+  }
+  25% {
+    color: #ff00c1;
+  }
+  50% {
+    color: #00fff9;
+  }
+  75% {
+    color: #ff8c00;
+  }
+  100% {
+    color: #0ef;
+  }
+}
+
+.sub-title::before,
+.sub-title::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 150px;
+  left: 0;
+  right: 0;
+  background: rgba(7, 85, 91, 0.585);
+  color: #fff;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.sub-title::before {
+  left: 7px;
+  text-shadow: -2px 0 #ff00c1;
+  animation: glitch-anim-1 8s infinite linear alternate-reverse;
+}
+
+.sub-title::after {
+  left: 3px;
+  text-shadow: -2px 0 #00fff9;
+  animation: glitch-anim-2 10s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+  0%,
+  100% {
+    clip: rect(0, 900px, 0, 0);
+  }
+  10% {
+    clip: rect(86px, 9999px, 82px, 0);
+  }
+  20% {
+    clip: rect(141px, 9999px, 39px, 0);
+  }
+  30% {
+    clip: rect(145px, 9999px, 98px, 0);
+  }
+  40% {
+    clip: rect(13px, 9999px, 78px, 0);
+  }
+  50% {
+    clip: rect(42px, 9999px, 134px, 0);
+  }
+  60% {
+    clip: rect(46px, 9999px, 134px, 0);
+  }
+  70% {
+    clip: rect(82px, 9999px, 67px, 0);
+  }
+  80% {
+    clip: rect(112px, 9999px, 121px, 0);
+  }
+  90% {
+    clip: rect(0, 900px, 0, 0);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0%,
+  100% {
+    clip: rect(0, 900px, 0, 0);
+  }
+  15% {
+    clip: rect(65px, 9999px, 133px, 0);
+  }
+  30% {
+    clip: rect(115px, 9999px, 49px, 0);
+  }
+  45% {
+    clip: rect(87px, 9999px, 153px, 0);
+  }
+  60% {
+    clip: rect(41px, 9999px, 117px, 0);
+  }
+  75% {
+    clip: rect(28px, 9999px, 149px, 0);
+  }
+  90% {
+    clip: rect(0, 900px, 0, 0);
+  }
+}
+
+.sub-title .glitch-effect {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(50px) rotateX(90deg);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.sub-title.animate .glitch-effect {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+  transition-delay: calc(0.1s * var(--i));
+}
+
 /* Ajoutez ces styles à votre fichier CSS existant */
 
 .carousel {
@@ -290,21 +403,6 @@ body {
   100% {
     transform: translateY(0px);
     opacity: 1;
-  }
-}
-
-@keyframes dynamicFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px) scale(0.8) rotate(-10deg); /* Départ légèrement en dessous, plus petit et incliné */
-  }
-  50% {
-    opacity: 0.5;
-    transform: translateY(-10px) scale(1.1) rotate(5deg); /* Milieu légèrement au-dessus, plus grand et incliné dans l'autre sens */
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1) rotate(0); /* Arrivée à la position normale */
   }
 }
 

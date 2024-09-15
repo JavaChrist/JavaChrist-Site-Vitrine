@@ -16,11 +16,20 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.carousel-inner').style.transform = `translateX(${newTransform})`;
 
     // Réinitialiser et rejouer l'animation du titre
+    animateTitle();
+  }
+
+  function animateTitle() {
     subTitle.classList.remove('animate');
-    // Utiliser setTimeout pour forcer le recalcul du style
+    subTitle.innerHTML = subTitle.textContent.split('').map((char, i) =>
+      `<span class="glitch-effect" style="--i:${i}">${char}</span>`
+    ).join('');
+
+    subTitle.setAttribute('data-text', subTitle.textContent);
+
     setTimeout(() => {
       subTitle.classList.add('animate');
-    }, 10); // Délai court pour forcer le recalcul
+    }, 10);
   }
 
   function nextSlide() {
@@ -31,10 +40,13 @@ document.addEventListener('DOMContentLoaded', function () {
     showSlide(currentIndex - 1);
   }
 
-  // Auto slide every 5 seconds (ralenti le changement d'image)
+  // Auto slide every 5 seconds
   setInterval(nextSlide, 5000);
 
   // Attach event listeners to the controls
   document.querySelector('.next').addEventListener('click', nextSlide);
   document.querySelector('.prev').addEventListener('click', prevSlide);
+
+  // Initial animation
+  animateTitle();
 });

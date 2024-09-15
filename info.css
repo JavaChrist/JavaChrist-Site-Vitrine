@@ -21,7 +21,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   color: #ededed;
-  width: 100%;
 }
 
 .header {
@@ -74,54 +73,57 @@ body {
   display: flex;
 }
 
-.about {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  background: rgba(7, 85, 91, 0.585);
-  top: 0;
-  left: 0;
-  z-index: -1;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
 }
 
+body {
+  color: #ededed;
+  background: #e9e9e9;
+  padding-top: 100px;
+}
 .about {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  justify-items: center;
-  gap: 1.5rem;
+  max-width: 800px;
+  background: rgba(7, 85, 91, 0.585);
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
   position: relative;
-  width: 100%;
+  padding-bottom: 150px;
+}
+
+.about::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .about-img {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  float: left;
+  width: 300px;
+  height: 300px;
+  shape-outside: circle(50% at 50% 50%);
+  margin: 0 30px 30px 0;
 }
 
 .avatar-img {
-  padding-bottom: 20%;
-  height: 500px;
-  width: 500px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 50%;
 }
 
-.ai-badge {
-  display: flex;
-  align-items: center;
-  padding: 5px 10px;
-  margin-top: 10px;
-}
-
-.ai-icon {
-  width: 200px;
-  height: 200px;
+.about-text {
+  /* Supprimé overflow: hidden; */
 }
 
 .about-text h2 {
+  margin-bottom: 10px;
   font-size: 60px;
 }
 
@@ -130,18 +132,30 @@ body {
 }
 
 .about-text h4 {
-  font-style: 20px;
+  font-size: 20px;
   font-weight: 600;
   color: #fff;
-  line-height: 1.7;
+  margin-bottom: 10px;
 }
 
 .about-text p {
   color: aliceblue;
-  font-style: 20px;
-  line-height: 1.8;
-  margin-bottom: 4rem;
-  margin-right: 50px;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.ai-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.ai-icon {
+  width: 180px;
+  height: 180px;
 }
 
 .footer {
