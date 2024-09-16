@@ -26,6 +26,12 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  position: relative; /* Permettre le positionnement absolu de l'enfant */
+}
+
+#logo {
+  display: flex;
+  align-items: center;
 }
 
 #logo img {
@@ -33,15 +39,15 @@ body {
 }
 
 .ai-badge {
-  position: relative;
-  left: 20px;
-  left: 450px
+  position: absolute; /* Positionner de manière absolue */
+  left: 430px; /* Ajuster la position horizontale */
+  top: -10px; /* Ajuster la position verticale */
   animation: spinHorizontal 4s ease forwards;
 }
 
 .ai-icon {
-  width: 60px;
-  height: 60px;
+  width: 180px; /* Augmenter la largeur */
+  height: 180px; /* Augmenter la hauteur */
 }
 
 /* Animation de l'AI badge */
@@ -108,12 +114,7 @@ body {
 }
 
 .file-item {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.1
-  ); /* Fond visible et contraste élevé */
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 1.5rem;
   border-radius: 0.5rem;
   display: flex;
