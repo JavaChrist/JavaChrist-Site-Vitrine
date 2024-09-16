@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
 
 * {
   margin: 0;
@@ -10,19 +10,23 @@
 html,
 body {
   height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  color: #ededed;
-  width: 100%;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  color: #333;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre le contenu verticalement */
 }
 
 .header {
@@ -42,6 +46,7 @@ body {
   position: relative;
   font-size: 25px;
   color: #fff;
+  text-decoration: none;
   font-weight: 600;
   cursor: default;
   opacity: 0;
@@ -53,6 +58,9 @@ body {
   position: absolute;
   top: 0;
   left: 450px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards, spinHorizontal 2s ease forwards;
+  animation-delay: 1s;
 }
 
 .ai-badge img {
@@ -82,103 +90,14 @@ body {
   display: none;
 }
 
-/* Style pour la navbar en mode desktop */
 .navbar {
   display: flex;
 }
-/* Fin de la navbar  */
 
-/* Débit de la partie Home  */
-.home {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 100%;
-}
-
-.home video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.home-content {
-  background: #051129b0;
-  height: 550px;
-  width: 90%;
-  border-radius: 25px;
-  padding: 30px;
-}
-
-.home-content h3 {
-  font-size: 38px;
-  font-weight: 700;
-  opacity: 0;
-  animation: slideBottom 1s ease forwards;
-  animation-delay: 0.3s;
-}
-
-.home-content h3:nth-of-type(2) {
-  margin-bottom: 30px;
-  animation: slideTop 1s ease forwards;
-  animation-delay: 0.7s;
-}
-
-.home-content h3 span {
-  color: #0ef;
-}
-
-.home-content h1 {
-  font-size: 56px;
-  font-weight: 700;
-  margin: -3px 0;
-  opacity: 0;
-  animation: slideRight 1s ease forwards;
-  animation-delay: 1s;
-}
-
-.home-content p {
-  font-size: 20px;
-  opacity: 0;
-  animation: slideLeft 1s ease forwards;
-  animation-delay: 1s;
-}
-
-.home-sci a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: 2px solid #0ef;
-  border-radius: 50%;
-  font-size: 20px;
-  color: #0ef;
-  text-decoration: none;
-  margin: 30px 15px 30px;
-  transition: 0.5s ease;
-  opacity: 0;
-  animation: slideLeft 1s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
-}
-
-/* Liens reseau scociaux  */
-.home-sci a:hover {
-  background: #0ef;
-  color: #081b29;
-  box-shadow: 0 0 20px #0ef;
-}
-
-.btn-box {
+.btn-box,
+.contact-form form .send {
   display: inline-block;
-  padding: 12px 28px;
+  padding: 14px 60px;
   background: #0ef;
   border-radius: 40px;
   font-size: 16px;
@@ -190,18 +109,31 @@ body {
   animation: slideTop 1s ease forwards;
   animation-delay: 2s;
   box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
-}
-.btn-box:hover {
-  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan;
+  border: 2px solid #555557; /* Ajout de la bordure */
 }
 
+.btn-box {
+  box-shadow: 0 0 5px cyan, 0 0 15px cyan, 0 0 25px cyan;
+}
+
+.btn-box:hover,
+.contact-form form .send:hover {
+  box-shadow: 0 0 5px cyan, 0 0 15px cyan, 0 0 25px cyan;
+  background: #0ef; /* Assure que le fond reste cyan au hover */
+  color: #000; /* Change la couleur du texte au hover */
+  border: 2px solid #000; /* Change la couleur de la bordure au hover */
+}
+
+/* footer  */
 .footer {
   background: rgba(7, 85, 91, 0.8);
   color: #fff;
   text-align: center;
   padding: 10px;
-  /* width: 100%; */
-  /* flex-shrink: 0; */
+  margin-top: auto;
+  z-index: 1; /* Assure que le footer est au-dessus de la vidéo */
+  position: relative; /* Assure que le footer est positionné correctement */
+  flex-shrink: 0; /* Empêche le footer de rétrécir */
 }
 
 .footer p {
@@ -224,33 +156,9 @@ body {
   text-decoration: underline;
 }
 
-@keyframes slideBottom {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
 @keyframes slideRight {
   0% {
     transform: translateX(-100px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes slideLeft {
-  0% {
-    transform: translateX(100px);
     opacity: 0;
   }
 
@@ -272,7 +180,29 @@ body {
   }
 }
 
-/* Mode responsive */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spinHorizontal {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(1440deg); /* 4 tours complets (360 * 4) */
+  }
+}
+
+@media (max-width: 1450px) {
+  .contact {
+    margin-top: 400px; /* Ajuste la marge pour les écrans entre 1450px et 1230px */
+  }
+}
 
 @media (max-width: 1270px) {
   .navbar {
@@ -311,97 +241,61 @@ body {
     padding: 0; /* Affiche la navbar lorsqu'elle a la classe 'active' */
   }
 
-  .services-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .about img {
-    display: none;
-  }
-  .about {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 18px;
-  }
   .contact {
     display: grid;
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 1050px) {
-  .home-content {
-    width: 100%; /* Faire en sorte que le home-content prenne toute la largeur */
-    padding: 20px; /* Réduire le padding pour qu'il soit plus compact */
-    height: auto; /* Permettre à la hauteur de s'adapter */
+    padding: 20px;
+    margin-top: 100px; /* Ajuste la marge pour les petits écrans */
   }
 
-  .home-content h1 {
-    font-size: 40px; /* Réduire la taille du texte pour qu'il soit plus lisible */
+  .contact h2 {
+    font-size: 50px; /* Réduit la taille de la police pour les petits écrans */
   }
 
-  .home-content h3 {
-    font-size: 28px; /* Réduction de la taille du texte des h3 */
+  .contact-text p {
+    margin-left: 0;
+    font-size: 16px; /* Réduit la taille de la police pour les petits écrans */
   }
 
-  .home-content p {
-    font-size: 16px; /* Ajuster la taille du texte pour qu'il reste lisible */
+  .contact-form form input,
+  .contact-form form textarea {
+    width: 100%; /* Assure que les champs de formulaire prennent toute la largeur */
   }
 
-  .btn-box {
-    padding: 10px 20px; /* Réduire la taille du bouton */
-    font-size: 14px; /* Réduire la taille du texte dans le bouton */
+  .contact-icons {
+    justify-content: center; /* Centre les icônes de contact */
   }
 
-  .services-list {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 800px) {
-  .home-content {
-    height: 600px;
-    width: 50%;
-    margin: 0 auto;
+  .contact-icons i {
+    margin: 10px; /* Réduit l'espacement entre les icônes */
   }
 }
 
 @media (max-width: 768px) {
-  header .logo {
-    font-size: 18px;
-  }
-
-  .home-content {
-    padding: 10px; /* Réduire encore plus le padding sur les petits écrans */
-  }
-
-  .home-content h1 {
-    font-size: 32px; /* Réduire encore la taille des titres */
-  }
-
-  .home-content h3 {
-    font-size: 24px;
-  }
-
-  .home-content p {
-    font-size: 14px;
-  }
-
-  .btn-box {
-    padding: 8px 16px;
-    font-size: 12px;
-  }
-
-  .about {
-    font-size: 16px;
+  .header {
+    padding: 10px 10px; /* Réduit le padding pour les très petits écrans */
   }
 
   .contact h2 {
-    font-size: 60px;
+    font-size: 40px; /* Réduit encore la taille de la police pour les très petits écrans */
+  }
+
+  .contact-text h4 {
+    font-size: 18px; /* Réduit la taille de la police pour les très petits écrans */
   }
 
   .contact-text p {
-    font-size: 17px;
+    font-size: 14px; /* Réduit la taille de la police pour les très petits écrans */
+  }
+
+  .contact-form form input,
+  .contact-form form textarea {
+    padding: 10px; /* Réduit le padding des champs de formulaire */
+  }
+
+  .btn-box,
+  .contact-form form .send {
+    padding: 10px 40px; /* Réduit le padding des boutons */
+    font-size: 14px; /* Réduit la taille de la police des boutons */
   }
 }

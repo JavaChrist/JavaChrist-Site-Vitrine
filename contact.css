@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
 
 * {
   margin: 0;
@@ -78,6 +78,9 @@ body {
   position: absolute;
   top: 0;
   left: 450px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards, spinHorizontal 2s ease forwards;
+  animation-delay: 1s; /* Délai pour synchroniser avec les autres animations */
 }
 
 .ai-badge img {
@@ -245,14 +248,19 @@ form textarea {
   animation: slideTop 1s ease forwards;
   animation-delay: 2s;
   box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+  border: 2px solid #555557; /* Ajout de la bordure */
 }
 
 .btn-box {
-  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan;
+  box-shadow: 0 0 5px cyan, 0 0 15px cyan, 0 0 25px cyan;
 }
 
+.btn-box:hover,
 .contact-form form .send:hover {
-  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan;
+  box-shadow: 0 0 5px cyan, 0 0 15px cyan, 0 0 25px cyan;
+  background: #0ef; /* Assure que le fond reste cyan au hover */
+  color: #000; /* Change la couleur du texte au hover */
+  border: 2px solid #000; /* Change la couleur de la bordure au hover */
 }
 
 /* footer  */
@@ -304,6 +312,24 @@ form textarea {
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spinHorizontal {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(1440deg); /* 4 tours complets (360 * 4) */
   }
 }
 
