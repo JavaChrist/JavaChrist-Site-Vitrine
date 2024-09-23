@@ -24,83 +24,15 @@ body {
   width: 100%;
 }
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 20px;
-  background: rgba(7, 85, 91, 0.8);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1;
-}
-
-.logo {
-  position: relative;
-  font-size: 25px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  cursor: default;
-  opacity: 0;
-  animation: slideTop 1s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
-}
-
-.ai-badge {
-  position: absolute;
-  top: 0;
-  left: 450px;
-}
-
-.ai-badge img {
-  width: 80%;
-  height: 80%;
-  object-fit: cover;
-}
-
-/* Debut navbar */
-.navbar a {
-  display: inline-block;
-  font-size: 25px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  margin-left: 35px;
-  transition: 0.3s;
-  opacity: 0;
-  animation: slideTop 0.5s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
-}
-.navbar a:hover {
-  color: #0ef;
-}
-
-.hamburger {
-  display: none;
-}
-
-/* Style pour la navbar en mode desktop */
-.navbar {
-  display: flex;
-}
-
 .sub-title {
   text-align: center;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 700;
-  padding: 150px 0 10px;
+  padding: 110px 0 10px;
   color: #000000;
   position: relative;
   overflow: hidden;
-  word-spacing: 20px; /* Augmente l'espace entre les mots */
-}
-
-.sub-title span {
-  display: inline-block;
-  animation: colorChange 8s infinite;
+  word-spacing: 20px;
 }
 
 @keyframes colorChange {
@@ -125,18 +57,18 @@ body {
 .sub-title::after {
   content: attr(data-text);
   position: absolute;
-  top: 150px;
+  top: 110px;
   left: 0;
   right: 0;
   background: rgba(7, 85, 91, 0.585);
-  /* color: #ffffff00; */
+   color: #ffffff00;
   clip: rect(0, 900px, 0, 0);
 }
 
 .sub-title::before {
   left: 7px;
   text-shadow: -2px 0 #ff9900;
-  animation: glitch-anim-1 8s infinite linear alternate-reverse;
+  animation: glitch-anim-1 10s infinite linear alternate-reverse;
 }
 
 .sub-title::after {
@@ -146,69 +78,61 @@ body {
 }
 
 @keyframes glitch-anim-1 {
-  0%,
-  100% {
+  0%, 100% {
     clip: rect(0, 900px, 0, 0);
   }
   10% {
-    clip: rect(86px, 9999px, 82px, 0);
+    clip: rect(40px, 9999px, 180px, 0);
   }
   20% {
-    clip: rect(141px, 9999px, 39px, 0);
+    clip: rect(80px, 9999px, 220px, 0);
   }
   30% {
-    clip: rect(145px, 9999px, 98px, 0);
+    clip: rect(120px, 9999px, 200px, 0);
   }
   40% {
-    clip: rect(13px, 9999px, 78px, 0);
+    clip: rect(30px, 9999px, 150px, 0);
   }
   50% {
-    clip: rect(42px, 9999px, 134px, 0);
+    clip: rect(50px, 9999px, 190px, 0);
   }
   60% {
-    clip: rect(46px, 9999px, 134px, 0);
+    clip: rect(60px, 9999px, 200px, 0);
   }
   70% {
-    clip: rect(82px, 9999px, 67px, 0);
+    clip: rect(90px, 9999px, 180px, 0);
   }
   80% {
-    clip: rect(112px, 9999px, 121px, 0);
+    clip: rect(110px, 9999px, 240px, 0); 
   }
   90% {
     clip: rect(0, 900px, 0, 0);
   }
 }
 
+
 @keyframes glitch-anim-2 {
-  0%,
-  100% {
+  0%, 100% {
     clip: rect(0, 900px, 0, 0);
   }
   15% {
-    clip: rect(65px, 9999px, 133px, 0);
+    clip: rect(45px, 9999px, 180px, 0); 
   }
   30% {
-    clip: rect(115px, 9999px, 49px, 0);
+    clip: rect(90px, 9999px, 210px, 0); 
   }
   45% {
-    clip: rect(87px, 9999px, 153px, 0);
+    clip: rect(130px, 9999px, 230px, 0); 
   }
   60% {
-    clip: rect(41px, 9999px, 117px, 0);
+    clip: rect(70px, 9999px, 190px, 0); 
   }
   75% {
-    clip: rect(28px, 9999px, 149px, 0);
+    clip: rect(50px, 9999px, 220px, 0); 
   }
   90% {
-    clip: rect(0, 900px, 0, 0);
+    clip: rect(0, 900px, 0, 0); 
   }
-}
-
-.sub-title .glitch-effect {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(50px) rotateX(90deg);
-  transition: opacity 0.5s, transform 0.5s;
 }
 
 .sub-title.animate .glitch-effect {
@@ -217,13 +141,13 @@ body {
   transition-delay: calc(0.1s * var(--i));
 }
 
-/* Ajoutez ces styles à votre fichier CSS existant */
+
 
 .carousel {
   position: relative;
-  width: 100%;
+  width: 40%;
   max-width: 800px;
-  margin: 100px auto 0; /* Ajoutez une marge en haut */
+  margin: 50px auto 0;
   overflow: hidden;
 }
 
@@ -247,19 +171,19 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 180px;
-  height: 50px;
+  width: 150px;
+  height: 30px;
   background: transparent;
   border: 2px solid #0ef;
   border-radius: 50px;
-  font-size: 20px;
+  font-size: 16px;
   color: #0ef;
   text-decoration: none;
   margin: 20px 0;
   transition: 0.5s ease;
   opacity: 0;
   animation: slideLeft 1s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
+  animation-delay: calc(0.5s * var(--i));
   background: #0ef;
 }
 
@@ -273,7 +197,8 @@ body {
 .carousel-item button:hover {
   background: #0ef;
   color: #081b29;
-  box-shadow: 0 0 20px #0ef;
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan;
+  border: 1px solid #001;
 }
 
 .carousel-control {
@@ -299,89 +224,6 @@ body {
   color: rgb(0, 238, 255);
   font-size: 50px;
   background: none;
-}
-
-.footer {
-  background: rgba(7, 85, 91, 0.8);
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.footer p {
-  flex: 1;
-  text-align: center;
-  font-size: 16px;
-  padding: 5px 0;
-  font-weight: 300;
-}
-
-.license-link {
-  flex: 1;
-  font-size: 16px;
-  color: #0ef;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  text-align: center;
-  width: 200px;
-}
-
-.license-link:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.home-sci {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.home-sci a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: 2px solid #0ef;
-  border-radius: 50%;
-  font-size: 20px;
-  color: #0ef;
-  text-decoration: none;
-  margin: 30px 15px 30px;
-  transition: 0.5s ease;
-  opacity: 1;
-  animation: slideLeft 1s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
-}
-
-/* Liens reseau scociaux  */
-.home-sci a:hover {
-  background: #0ef;
-  color: #081b29;
-  box-shadow: 0 0 20px #0ef;
-}
-
-.btn-box {
-  display: inline-block;
-  padding: 12px 28px;
-  background: #0ef;
-  border-radius: 40px;
-  font-size: 16px;
-  color: #081b29;
-  letter-spacing: 1px;
-  text-decoration: none;
-  font-weight: 600;
-  opacity: 1;
-  animation: slideTop 1s ease forwards;
-  animation-delay: 2s;
-  box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
-}
-.btn-box:hover {
-  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan;
 }
 
 @keyframes slideRight {
@@ -422,15 +264,15 @@ body {
 
 @media (max-width: 1270px) {
   .navbar {
-    display: none; /* Cache la navbar en mode mobile */
+    display: none;
     flex-direction: column;
     position: absolute;
-    top: 70px; /* Positionne juste sous le hamburger */
-    right: 20px; /* Aligne sur la droite, sous l'icône hamburger */
+    top: 70px; 
+    right: 20px; 
     background: rgba(7, 85, 91, 0.8);
-    border-radius: 10px; /* Ajout d'un peu de style */
+    border-radius: 10px; 
     padding: 10px;
-    width: auto; /* La largeur s'adapte automatiquement à celle des liens */
+    width: auto;
   }
 
   .navbar a {
@@ -442,7 +284,7 @@ body {
     display: block;
   }
 
-  /* Affiche l'icône hamburger en mode mobile */
+ 
   .hamburger {
     display: block;
     cursor: pointer;
@@ -454,6 +296,6 @@ body {
     display: flex;
     align-items: center;
     width: 160px;
-    padding: 0; /* Affiche la navbar lorsqu'elle a la classe 'active' */
+    padding: 0; 
   }
 }

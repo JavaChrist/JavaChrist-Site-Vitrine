@@ -54,4 +54,3 @@ window.serviceDetailsEN = {
         content: "Our website redesign service includes interface modernization, adding new features, improving user experience, and performance optimization. We breathe new life into your existing website."
     }
 };
-// ... Ajoutez les autres services en anglais ici

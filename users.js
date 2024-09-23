@@ -1,7 +1,6 @@
 const users = [
-    { email: "client1@example.com", password: "password1" },
-    { email: "client2@example.com", password: "1234" },
-    { email: "ab@cd.fr", password: "1234" },
-    { email: "contact@javachrist.fr", password: "Mm2pjava140114@" }
+    { name: "JavaChrist", email: "contact@javachrist.fr", password: "Mm2pjava140114@" },
+    { name: "Lizzie Grohens", email: "lizzie.grohens14@gmail.com", password: "14092000" }
     // Ajoute d'autres utilisateurs ici
 ];
+

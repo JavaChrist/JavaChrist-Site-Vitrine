@@ -3,25 +3,23 @@
 
 /* VARIABLES CSS */
 :root {
-  /* Colors */
+
   --white-color: hsl(0, 0%, 100%);
   --black-color: hsl(0, 0%, 0%);
 
-  /* Font and typography */
   --body-font: "Poppins", sans-serif;
   --h1-font-size: 1.75rem;
   --normal-font-size: 1rem;
   --small-font-size: 0.813rem;
 
-  /* Font weight */
+
   --font-medium: 500;
 }
 
-/* Supprime le rectangle blanc sur le focus des champs */
 .login__input:focus {
-  outline: none; /* Supprime l'outline par défaut */
-  box-shadow: none; /* Supprime le box-shadow qui peut donner un effet de surbrillance */
-  background: none; /* Assure que le fond reste transparent */
+  outline: none; 
+  box-shadow: none;
+  background: none;
 }
 
 /* Base */
@@ -73,17 +71,17 @@ img {
   object-position: center;
 }
 
-/* Limiter la largeur de la carte */
+
 .login__form {
   position: relative;
   background-color: hsla(0, 0%, 10%, 0.1);
   border: 2px solid var(--white-color);
-  margin-inline: auto; /* Centrer la carte */
+  margin-inline: auto; 
   padding: 2rem 1.5rem;
   border-radius: 1rem;
   backdrop-filter: blur(8px);
   width: 100%;
-  max-width: 400px; /* Limite la taille de la carte */
+  max-width: 400px;
 }
 
 .login__title {
@@ -115,11 +113,11 @@ img {
   font-size: 1.25rem;
 }
 
-/* Garde les champs de saisie transparents */
+
 .login__input {
   width: 100%;
   padding-block: 0.5rem;
-  background: none; /* Retirer le background blanc */
+  background: none;
   color: var(--white-color);
   position: relative;
   z-index: 1;
@@ -138,7 +136,7 @@ img {
   transition: top 0.3s, font-size 0.3s;
 }
 
-/* Assure la bonne visibilité et position de l'icône de l'œil */
+
 .login__eye {
   position: absolute;
   right: 10px;
@@ -146,7 +144,7 @@ img {
   transform: translateY(-50%);
   z-index: 10;
   cursor: pointer;
-  color: var(--white-color); /* S'assure que l'œil soit visible */
+  color: var(--white-color); 
 }
 
 .login__box:nth-child(2) input {
@@ -237,7 +235,7 @@ img {
   font-size: var(--small-font-size);
 }
 
-/* Styles pour les boutons de langue */
+
 .language-buttons {
   position: absolute;
   top: 20px;
@@ -272,7 +270,7 @@ img {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Garde le champ transparent même en autofill (pour Chrome et Safari) */
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {

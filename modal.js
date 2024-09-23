@@ -13,8 +13,8 @@ function initModal() {
     function showModal(serviceId) {
         console.log("Showing modal for service:", serviceId);
 
-        // Vérifier si nous sommes sur la page anglaise ou française
-        const isEnglish = window.location.pathname.includes('accueil.html');
+        // Vérifier la langue de la page en utilisant l'attribut lang
+        const isEnglish = document.documentElement.lang === 'en';
         const details = isEnglish ? window.serviceDetailsEN[serviceId] : window.serviceDetails[serviceId];
 
         if (details) {
@@ -29,17 +29,17 @@ function initModal() {
         }
     }
 
-    // Gestionnaire d'événements pour les boutons "En savoir plus"
+    // Gestionnaire d'événements pour les boutons "Learn more"
     document.querySelectorAll('.read').forEach(function (btn) {
         btn.onclick = function (e) {
             e.preventDefault();
             var serviceId = this.getAttribute('data-service');
             console.log("Read button clicked:", serviceId);
             showModal(serviceId);
-        }
+        };
     });
 
-    // Fermeture de la modale
+    // Fonction pour fermer la modale
     function closeModal() {
         console.log("Closing modal");
         modal.classList.remove('show');
@@ -56,7 +56,7 @@ function initModal() {
         if (event.target == modal) {
             closeModal();
         }
-    }
+    };
 }
 
 // Appeler initModal une fois que le DOM est chargé
@@ -66,11 +66,11 @@ if (document.readyState === "loading") {
     initModal();
 }
 
-// Assurez-vous que ces objets sont définis globalement
+// Définit des objets par défaut si non définis
 window.serviceDetails = window.serviceDetails || {
-    // ... Définissez ici les détails des services en français ...
+    // Définir ici les services en français...
 };
 
 window.serviceDetailsEN = window.serviceDetailsEN || {
-    // ... Définissez ici les détails des services en anglais ...
+    // Définir ici les services en anglais...
 };

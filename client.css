@@ -13,73 +13,14 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow: hidden;
 }
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  background: rgba(7, 85, 91, 0.8);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-  position: relative; /* Permettre le positionnement absolu de l'enfant */
-}
-
-#logo {
-  display: flex;
-  align-items: center;
-}
-
-#logo img {
-  height: 60px;
-}
-
-.ai-badge {
-  position: absolute; /* Positionner de manière absolue */
-  left: 430px; /* Ajuster la position horizontale */
-  top: -10px; /* Ajuster la position verticale */
-  animation: spinHorizontal 4s ease forwards;
-}
-
-.ai-icon {
-  width: 180px; /* Augmenter la largeur */
-  height: 180px; /* Augmenter la hauteur */
-}
-
-/* Animation de l'AI badge */
-@keyframes spinHorizontal {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(1440deg); /* 4 tours complets */
-  }
-}
-
-.navbar {
-  display: flex;
-  gap: 20px;
-}
-
-.navbar a {
-  font-size: 20px;
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-  color: #0ef;
-}
 
 /* Section client */
 .client-space {
   max-width: 900px;
-  margin: 220px auto 2rem auto; /* Ajustement de la marge pour abaisser les cartes */
+  margin: 120px auto 2rem auto; /* Ajustement de la marge pour abaisser les cartes */
   padding: 2rem;
   background-color: rgba(7, 85, 91, 0.8); /* Couleur plus visible */
   border-radius: 1rem;
@@ -141,56 +82,3 @@ body {
   color: #fff;
 }
 
-/* Footer */
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(7, 85, 91, 0.8);
-  color: #fff;
-  padding: 30px 20px; /* Réduction de la hauteur */
-  margin-top: auto;
-}
-
-.footer-left {
-  text-align: left;
-}
-
-.footer-center {
-  text-align: center;
-}
-
-.footer-right {
-  display: flex;
-  justify-content: flex-end;
-  gap: 15px;
-}
-
-.footer p {
-  margin: 0;
-  font-size: 20px;
-}
-
-.license-link {
-  font-size: 20px;
-  color: #0ef;
-  text-decoration: none;
-}
-
-.license-link:hover {
-  color: #fff;
-}
-
-.home-sci {
-  display: flex;
-  gap: 20px;
-}
-
-.home-sci a {
-  font-size: 30px;
-  color: #fff;
-}
-
-.home-sci a:hover {
-  color: #0ef;
-}

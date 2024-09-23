@@ -1,10 +1,15 @@
 /* Styles spécifiques à la page Accueil */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
 .home {
   position: relative;
   width: 100%;
-  height: calc(
-    100vh - 80px
-  ); /* Ajuste la hauteur pour tenir compte de l'en-tête */
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -84,37 +89,6 @@
   animation-delay: 1s;
 }
 
-.home-sci {
-  display: flex;
-  justify-content: flex-start; /* Aligne les icônes à gauche */
-  margin-top: 20px;
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 1.5s;
-}
-
-.home-sci a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: 2px solid #0ef;
-  border-radius: 50%;
-  font-size: 20px;
-  color: #0ef;
-  text-decoration: none;
-  margin: 0 10px;
-  transition: 0.5s ease;
-}
-
-.home-sci a:hover {
-  background: #0ef;
-  color: #081b29;
-  box-shadow: 0 0 20px #0ef;
-}
-
 .btn-box {
   display: inline-block;
   padding: 12px 28px;
@@ -130,6 +104,7 @@
   opacity: 0;
   animation: slideTop 1s ease forwards;
   animation-delay: 2s;
+  border: 1px solid #0ef;
 }
 
 .btn-box:hover {
@@ -187,35 +162,6 @@
     transform: translateX(0px);
     opacity: 1;
   }
-}
-
-.footer {
-  background: rgba(7, 85, 91, 0.8);
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  margin-top: auto;
-  z-index: 1; /* Assure que le footer est au-dessus de la vidéo */
-}
-
-.footer p {
-  width: 100%;
-  text-align: center;
-  font-size: 16px;
-  padding: 5px 0;
-  font-weight: 300;
-}
-
-.license-link {
-  font-size: 16px;
-  color: #0ef;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.license-link:hover {
-  color: #fff;
-  text-decoration: underline;
 }
 
 @media (max-width: 1270px) {

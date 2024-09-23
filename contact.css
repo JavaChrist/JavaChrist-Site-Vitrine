@@ -49,78 +49,13 @@ body {
   }
 }
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 20px;
-  background: rgba(7, 85, 91, 0.8);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1;
-}
-
-.logo {
-  position: relative;
-  font-size: 25px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  cursor: default;
-  opacity: 0;
-  animation: slideTop 1s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
-}
-
-.ai-badge {
-  position: absolute;
-  top: 0;
-  left: 450px;
-  opacity: 0;
-  animation: fadeIn 1s ease forwards, spinHorizontal 2s ease forwards;
-  animation-delay: 1s; /* Délai pour synchroniser avec les autres animations */
-}
-
-.ai-badge img {
-  width: 80%;
-  height: 80%;
-  object-fit: cover;
-}
-
-/* Debut navbar */
-.navbar a {
-  display: inline-block;
-  font-size: 25px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  margin-left: 35px;
-  transition: 0.3s;
-  opacity: 0;
-  animation: slideTop 0.5s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
-}
-.navbar a:hover {
-  color: #0ef;
-}
-
-.hamburger {
-  display: none;
-}
-
-.navbar {
-  display: flex;
-}
-
 .contact {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 3rem;
   padding-left: 30px;
-  margin-top: 600px;
+  margin-top: 100px;
 }
 
 .contact h2 {
@@ -248,47 +183,15 @@ form textarea {
   animation: slideTop 1s ease forwards;
   animation-delay: 2s;
   box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
-  border: 2px solid #555557; /* Ajout de la bordure */
-}
-
-.btn-box {
-  box-shadow: 0 0 5px cyan, 0 0 15px cyan, 0 0 25px cyan;
+  border: 1px solid #0ef;
 }
 
 .btn-box:hover,
 .contact-form form .send:hover {
-  box-shadow: 0 0 5px cyan, 0 0 15px cyan, 0 0 25px cyan;
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan;
   background: #0ef; /* Assure que le fond reste cyan au hover */
   color: #000; /* Change la couleur du texte au hover */
   border: 2px solid #000; /* Change la couleur de la bordure au hover */
-}
-
-/* footer  */
-.footer {
-  background: rgba(7, 85, 91, 0.8);
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-}
-
-.footer p {
-  width: 100%;
-  text-align: center;
-  font-size: 16px;
-  padding: 5px 0;
-  font-weight: 300;
-}
-
-.license-link {
-  font-size: 16px;
-  color: #0ef;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.license-link:hover {
-  color: #fff;
-  text-decoration: underline;
 }
 
 @keyframes slideRight {
