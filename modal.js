@@ -19,7 +19,8 @@ function initModal() {
 
         if (details) {
             modalTitle.textContent = details.title;
-            modalText.textContent = details.content;
+            // Utilisation de innerHTML pour permettre l'interprétation des balises HTML dans le texte
+            modalText.innerHTML = details.content;
             modal.style.display = "block";
             setTimeout(() => {
                 modal.classList.add('show');

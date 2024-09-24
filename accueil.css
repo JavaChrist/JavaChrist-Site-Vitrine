@@ -1,4 +1,4 @@
-/* Styles spécifiques à la page Accueil */
+
 * {
   margin: 0;
   padding: 0;
@@ -31,21 +31,21 @@
 
 .home-content {
   background: #051129b0;
-  height: auto; /* Permet à la hauteur de s'adapter */
-  width: 80%; /* Réduit la largeur */
-  max-width: 800px; /* Limite la largeur maximale */
+  height: auto; 
+  width: 80%; 
+  max-width: 800px; 
   border-radius: 25px;
   padding: 30px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: left; /* Aligne le texte à gauche */
+  text-align: left;
   color: #fff;
   opacity: 0;
   animation: fadeIn 1s ease forwards;
   animation-delay: 1s;
-  z-index: 1; /* Assure que le contenu est au-dessus de la vidéo */
+  z-index: 1;
 }
 
 .home-content h3,
@@ -55,12 +55,16 @@
   margin: 10px 0;
 }
 
-.home-content h3 {
-  font-size: 38px;
+.home-content h1 {
+  font-size: 56px;
   font-weight: 700;
   opacity: 0;
   animation: slideBottom 1s ease forwards;
   animation-delay: 0.3s;
+}
+
+.home-content h3 {
+  font-size: 40px;
 }
 
 .home-content h3:nth-of-type(2) {
@@ -73,8 +77,8 @@
   color: #0ef;
 }
 
-.home-content h1 {
-  font-size: 56px;
+.home-content h2 {
+  font-size: 38px;
   font-weight: 700;
   margin: -3px 0;
   opacity: 0;
@@ -166,15 +170,15 @@
 
 @media (max-width: 1270px) {
   .navbar {
-    display: none; /* Cache la navbar en mode mobile */
+    display: none; 
     flex-direction: column;
     position: absolute;
-    top: 70px; /* Positionne juste sous le hamburger */
-    right: 20px; /* Aligne sur la droite, sous l'icône hamburger */
+    top: 70px; 
+    right: 20px; 
     background: rgba(7, 85, 91, 0.8);
-    border-radius: 10px; /* Ajout d'un peu de style */
+    border-radius: 10px;
     padding: 10px;
-    width: auto; /* La largeur s'adapte automatiquement à celle des liens */
+    width: auto; 
   }
 
   .navbar a {
@@ -186,7 +190,7 @@
     display: block;
   }
 
-  /* Affiche l'icône hamburger en mode mobile */
+ 
   .hamburger {
     display: block;
     cursor: pointer;
@@ -198,40 +202,40 @@
     display: flex;
     align-items: center;
     width: 160px;
-    padding: 0; /* Affiche la navbar lorsqu'elle a la classe 'active' */
+    padding: 0; 
   }
 
   .home-content {
-    width: 100%; /* Faire en sorte que le home-content prenne toute la largeur */
-    padding: 20px; /* Réduire le padding pour qu'il soit plus compact */
-    height: auto; /* Permettre à la hauteur de s'adapter */
+    width: 100%; 
+    padding: 20px; 
+    height: auto; 
   }
 
   .home-content h1 {
-    font-size: 40px; /* Réduire la taille du texte pour qu'il soit plus lisible */
+    font-size: 40px; 
   }
 
   .home-content h3 {
-    font-size: 28px; /* Réduction de la taille du texte des h3 */
+    font-size: 28px; 
   }
 
   .home-content p {
-    font-size: 16px; /* Ajuster la taille du texte pour qu'il reste lisible */
+    font-size: 16px;
   }
 
   .btn-box {
-    padding: 10px 20px; /* Réduire la taille du bouton */
-    font-size: 14px; /* Réduire la taille du texte dans le bouton */
+    padding: 10px 20px; 
+    font-size: 14px;
   }
 }
 
 @media (max-width: 768px) {
   .home-content {
-    padding: 10px; /* Réduire encore plus le padding sur les petits écrans */
+    padding: 10px; 
   }
 
   .home-content h1 {
-    font-size: 32px; /* Réduire encore la taille des titres */
+    font-size: 32px;
   }
 
   .home-content h3 {

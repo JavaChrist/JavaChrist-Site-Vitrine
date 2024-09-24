@@ -22,7 +22,7 @@
   background: none;
 }
 
-/* Base */
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -224,7 +224,7 @@ img {
   text-decoration: underline;
 }
 
-/* Input focus move up label */
+
 .login__input:focus + .login__label {
   top: -15px;
   font-size: var(--small-font-size);

@@ -35,6 +35,29 @@ body {
   word-spacing: 20px;
 }
 
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+}
+
+.carousel-item .description {
+  position: absolute;
+  bottom: 150px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  padding: 10px;
+  display: none; /* Masquer par défaut */
+}
+
+.carousel-item:hover .description {
+  display: block; /* Afficher au survol */
+}
+
+
 @keyframes colorChange {
   0% {
     color: #0ef;
@@ -219,11 +242,22 @@ body {
   background: none;
 }
 
+.carousel-control.prev:hover {
+  font-size: 60px;
+  color:rgb(183, 247, 5);
+}
+
+
 .carousel-control.next {
   right: 10px;
   color: rgb(0, 238, 255);
   font-size: 50px;
   background: none;
+}
+
+.carousel-control.next:hover {
+  font-size: 60px;
+  color:rgb(183, 247, 5);
 }
 
 @keyframes slideRight {

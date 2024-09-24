@@ -17,38 +17,43 @@ body {
 }
 
 
-/* Section client */
+
 .client-space {
   max-width: 900px;
-  margin: 120px auto 2rem auto; /* Ajustement de la marge pour abaisser les cartes */
-  padding: 2rem;
-  background-color: rgba(7, 85, 91, 0.8); /* Couleur plus visible */
+  margin: 130px auto 2rem auto; 
+  padding: 1rem;
+  background-color: rgba(7, 85, 91, 0.8); 
   border-radius: 1rem;
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
 }
 
 .client-space h1 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
   font-size: 2rem;
-  color: #fff; /* Couleur blanche pour un bon contraste */
+  color: #fff; 
   font-weight: bold;
 }
 
-/* Informations du client */
+.client-space p {
+color: #fff;
+margin-bottom: 20px;
+}
+
+
 #client-info {
   text-align: center;
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.1); /* Fond transparent */
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1); 
   border-radius: 0.5rem;
   color: #fff;
   font-size: 1.2rem;
   font-weight: 500;
 }
 
-/* Liste des fichiers */
+
 #file-list ul {
   list-style: none;
   padding: 0;

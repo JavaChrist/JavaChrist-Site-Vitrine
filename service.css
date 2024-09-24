@@ -158,11 +158,12 @@ body {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.73);
+  background-color: rgba(0, 0, 0, 0.814);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  color: rgba(240, 255, 240, 0.822);
+  color: rgb(223, 235, 239);
+  font-size: 25px;
 }
 
 .modal.show {

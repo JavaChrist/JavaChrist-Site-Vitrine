@@ -68,15 +68,15 @@ body {
   color: #0ef;
 }
 
-.about-text h4 {
+.about-text h3 {
   font-size: 20px;
   font-weight: 600;
-  color: #fff;
+  color: #330695;
   margin-bottom: 10px;
 }
 
 .about-text p {
-  color: aliceblue;
+  color: rgb(36, 37, 38);
   font-size: 20px;
   line-height: 1.4;
   margin-bottom: 1rem;
