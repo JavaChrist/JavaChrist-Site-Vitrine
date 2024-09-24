@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const observer = new IntersectionObserver(function (entries) {
             if (entries[0].isIntersecting) {
                 new Typed(textElement, options);
-                observer.disconnect(); // Stop l'observation une fois l'animation lancée
+                observer.disconnect();
             }
         });
 

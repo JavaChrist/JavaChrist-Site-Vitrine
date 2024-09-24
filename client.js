@@ -1,12 +1,10 @@
-// Fonction pour trouver l'utilisateur connecté
+
 function getLoggedInUser() {
     const userEmail = localStorage.getItem("userEmail");
 
-    // Assure-toi que le tableau 'users' est défini dans users.js
     return users.find(user => user.email === userEmail);
 }
 
-// Fonction pour afficher les informations du client
 function displayClientInfo() {
     const client = getLoggedInUser();
 
@@ -17,12 +15,11 @@ function displayClientInfo() {
             <p>Email : ${client.email}</p>
         `;
     } else {
-        // Gérer le cas où aucun utilisateur n'est trouvé
-        window.location.href = "/fr/login.html"; // Redirection si utilisateur non trouvé
+
+        window.location.href = "/fr/login.html";
     }
 }
 
-// Fonction pour afficher la liste des fichiers
 function displayFileList() {
     const files = [
         { name: "Facture - Janvier", url: "/files/facture-janvier.pdf" },
@@ -39,24 +36,21 @@ function displayFileList() {
     });
 }
 
-// Fonction de déconnexion
 function logout() {
     localStorage.removeItem("loggedIn");
     localStorage.removeItem("userEmail");
     window.location.href = "/fr/login.html";
 }
 
-// Vérifie si l'utilisateur est connecté
 document.addEventListener("DOMContentLoaded", function () {
     const loggedIn = localStorage.getItem("loggedIn");
 
     if (!loggedIn) {
         window.location.href = "/fr/login.html";
     } else {
-        displayClientInfo(); // Affiche les infos client
-        displayFileList();   // Affiche les fichiers du client
+        displayClientInfo();
+        displayFileList();
     }
 });
 
-// Gestionnaire d'événement pour la déconnexion
 document.getElementById("logout").addEventListener("click", logout);

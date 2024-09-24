@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const newTransform = -currentIndex * 100 + '%';
     document.querySelector('.carousel-inner').style.transform = `translateX(${newTransform})`;
 
-    // Réinitialiser et rejouer l'animation du titre
     animateTitle();
   }
 
@@ -40,13 +39,10 @@ document.addEventListener('DOMContentLoaded', function () {
     showSlide(currentIndex - 1);
   }
 
-  // Auto slide every 5 seconds
   setInterval(nextSlide, 5000);
 
-  // Attach event listeners to the controls
   document.querySelector('.next').addEventListener('click', nextSlide);
   document.querySelector('.prev').addEventListener('click', prevSlide);
 
-  // Initial animation
   animateTitle();
 });

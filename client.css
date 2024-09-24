@@ -67,17 +67,17 @@ margin-bottom: 20px;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Légère ombre pour les cartes */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .file-item:hover {
-  transform: translateY(-5px); /* Effet de survol pour les fichiers */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ombre accentuée au survol */
+  transform: translateY(-5px); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
 }
 
 .file-item a {
-  color: #0ef; /* Couleur accentuée pour les liens */
+  color: #0ef; 
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;

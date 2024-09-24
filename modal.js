@@ -1,4 +1,4 @@
-// Fonction pour initialiser la modale
+
 function initModal() {
     console.log("Initializing modal");
 
@@ -9,17 +9,14 @@ function initModal() {
 
     console.log("Modal elements:", modal, span, modalTitle, modalText);
 
-    // Fonction pour afficher la modale avec le contenu correct
     function showModal(serviceId) {
         console.log("Showing modal for service:", serviceId);
 
-        // Vérifier la langue de la page en utilisant l'attribut lang
         const isEnglish = document.documentElement.lang === 'en';
         const details = isEnglish ? window.serviceDetailsEN[serviceId] : window.serviceDetails[serviceId];
 
         if (details) {
             modalTitle.textContent = details.title;
-            // Utilisation de innerHTML pour permettre l'interprétation des balises HTML dans le texte
             modalText.innerHTML = details.content;
             modal.style.display = "block";
             setTimeout(() => {
@@ -30,7 +27,6 @@ function initModal() {
         }
     }
 
-    // Gestionnaire d'événements pour les boutons "Learn more"
     document.querySelectorAll('.read').forEach(function (btn) {
         btn.onclick = function (e) {
             e.preventDefault();
@@ -40,7 +36,6 @@ function initModal() {
         };
     });
 
-    // Fonction pour fermer la modale
     function closeModal() {
         console.log("Closing modal");
         modal.classList.remove('show');
@@ -49,7 +44,6 @@ function initModal() {
         }, 300);
     }
 
-    // Gestionnaires d'événements pour fermer la modale
     if (span) {
         span.onclick = closeModal;
     }
@@ -60,18 +54,17 @@ function initModal() {
     };
 }
 
-// Appeler initModal une fois que le DOM est chargé
 if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initModal);
 } else {
     initModal();
 }
 
-// Définit des objets par défaut si non définis
+
 window.serviceDetails = window.serviceDetails || {
-    // Définir ici les services en français...
+
 };
 
 window.serviceDetailsEN = window.serviceDetailsEN || {
-    // Définir ici les services en anglais...
+
 };

@@ -1,4 +1,4 @@
-// Function to find the logged-in user
+
 function getLoggedInUser() {
   const userEmail = localStorage.getItem("userEmail");
   console.log("User email:", userEmail);
@@ -11,7 +11,6 @@ function getLoggedInUser() {
   return users.find(user => user.email === userEmail);
 }
 
-// Function to display client information
 function displayClientInfo() {
   const client = getLoggedInUser();
 
@@ -24,11 +23,10 @@ function displayClientInfo() {
     console.log("Client information displayed");
   } else {
     console.warn("Redirecting to login page");
-    window.location.href = "/en/login-en.html"; // Redirect to English login page
+    window.location.href = "/en/login-en.html";
   }
 }
 
-// Function to display the file list
 function displayFileList() {
   const files = [
     { name: "Invoice - January", url: "/files/invoice-january.pdf" },
@@ -46,15 +44,13 @@ function displayFileList() {
   console.log("File list displayed");
 }
 
-// Logout function
 function logout() {
   localStorage.removeItem("loggedIn");
   localStorage.removeItem("userEmail");
   console.log("User logged out, redirecting to login page");
-  window.location.href = "/en/login-en.html"; // Redirect to English login page
+  window.location.href = "/en/login-en.html";
 }
 
-// Check if the user is logged in
 document.addEventListener("DOMContentLoaded", function () {
   const loggedIn = localStorage.getItem("loggedIn");
 
@@ -63,10 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "/en/login-en.html";
   } else {
     console.log("User logged in");
-    displayClientInfo(); // Display client info
-    displayFileList();   // Display client files
+    displayClientInfo();
+    displayFileList();
   }
 });
 
-// Logout event handler
 document.getElementById("logout").addEventListener("click", logout);

@@ -1,4 +1,4 @@
-// Typed.js configuration
+
 var typed = new Typed(".text", {
     strings: ["Web Developer", "Frontend Developer", "Freelance"],
     typeSpeed: 100,
