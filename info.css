@@ -23,16 +23,22 @@ body {
   color: #ededed;
 }
 
+h1 {
+  color: rgba(7, 85, 91, 0.585);
+  font-size: 56px;
+  margin:0 auto;
+  padding: 30px;
+}
+
 .about {
   max-width: 1200px;
   background: rgba(7, 85, 91, 0.585);
-  margin: 50px auto;
+  margin: 200px auto 0;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   position: relative;
-  margin-top: 150px;
 }
 
 .about::after {

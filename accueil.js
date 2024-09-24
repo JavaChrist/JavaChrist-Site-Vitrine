@@ -1,11 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const options = {
-        strings: ['Développeur Web', 'Designer UI/UX', 'Freelance'],
-        typeSpeed: 50,
-        backSpeed: 50,
-        backDelay: 2000,
-        loop: true,
-    };
+    const textElement = document.querySelector('.home-content .text');
 
-    const typed = new Typed('.home-content .text', options);
+    if (textElement) {
+        const options = {
+            strings: ['Développeur Web', 'Designer UI/UX', 'Freelance'],
+            typeSpeed: 50,
+            backSpeed: 25,
+            backDelay: 2000,
+            loop: true,
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            if (entries[0].isIntersecting) {
+                new Typed(textElement, options);
+                observer.disconnect(); // Stop l'observation une fois l'animation lancée
+            }
+        });
+
+        observer.observe(textElement);
+    }
 });

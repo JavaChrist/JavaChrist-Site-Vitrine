@@ -1,110 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - JavaChrist</title>
-    <link
-      rel="shortcut icon"
-      href="/assets/logo/favicon.ico"
-      type="image/x-icon"
-    />
-    <meta
-      name="description"
-      content="Discover Christian Grohens, freelance web developer, his services in website creation, UI/UX, and SEO, as well as his recent projects. Contact him for your web development needs."
-    />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/accueil.css" />
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  </head>
 
-  <body>
-    <!-- Header with logo and navigation -->
-    <header class="header">
-      <div id="logo">
-        <img
-          src="/assets/logo/Logo-Bandeau-JavaChrist.png"
-          alt="JavaChrist Logo"
-        />
-      </div>
-      <div class="ai-badge">
-        <img
-          src="/assets/logo/google-ai-essentials.png"
-          alt="AI Trained"
-          class="ai-icon"
-        />
-      </div>
-      <nav class="navbar" id="nav-links">
-        <!-- Navigation links -->
-        <a href="/en/home.html" style="--i: 1">Home</a>
-        <a href="/en/about.html" style="--i: 2">About</a>
-        <a href="/en/services.html" style="--i: 3">Services</a>
-        <a href="/en/projects.html" style="--i: 5">Projects</a>
-        <a href="/en/contact.html" style="--i: 6">Contact</a>
-        <a href="/fr/accueil.html" style="--i: 7">Français</a>
-        <a href="/en/login-en.html" style="--i: 8">Login</a>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christian Grohens - Freelance Web Developer in Toulouse</title>
+  <link rel="shortcut icon" href="/assets/logo/favicon.ico" type="image/x-icon" />
+  <meta name="description"
+    content="Discover Christian Grohens, a freelance web developer based in Toulouse. Specializing in website creation, UI/UX design, SEO, and more. Contact him for your web development projects in Toulouse and across France." />
 
-      <!-- Hamburger icon -->
-      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-        <i class="bx bx-menu"></i>
-      </div>
-    </header>
+  <meta property="og:title" content="Christian Grohens - Freelance Web Developer in Toulouse" />
+  <meta property="og:description"
+    content="Discover Christian Grohens, a freelance web developer based in Toulouse. Specializing in website creation, UI/UX design, SEO, and more." />
+  <meta property="og:image" content="/assets/logo/Logo-Bandeau-JavaChrist.png" />
+  <meta property="og:url" content="https://javachrist.fr/en/home.html" />
+  <meta property="og:type" content="website" />
 
-    <!-- Home section with background video -->
-    <section class="home">
-      <div class="bloc">
-        <video
-          src="/assets/video/programmeur.mp4"
-          autoplay
-          muted
-          loop
-        ></video>
-        <div class="home-content">
-          <!-- Home section content -->
-          <h3>Hello, I'm</h3>
-          <h1>Christian Grohens</h1>
-          <h3>I am a <span class="text"></span></h3>
-          <p>
-            I am a Web Developer with several years of experience.
-            <br />My expertise includes creating websites, designing user
-            interfaces, and much more.
-          </p>
-          <a href="/en/about.html" class="btn-box">More About Me</a>
-        </div>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Christian Grohens - Freelance Web Developer in Toulouse" />
+  <meta name="twitter:description"
+    content="Discover Christian Grohens, freelance web developer, and his expertise in website creation, UI/UX design, and SEO." />
+  <meta name="twitter:image" content="/assets/logo/Logo-Bandeau-JavaChrist.png" />
+
+
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/accueil.css" />
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body>
+  <!-- Header with logo and navigation -->
+  <header class="header">
+    <div id="logo">
+      <img src="/assets/logo/Logo-Bandeau-JavaChrist.png" alt="Logo JavaChrist Freelance Web Developer" />
+
+    </div>
+    <div class="ai-badge">
+      <img src="/assets/logo/google-ai-essentials.png" alt="Google AI Trained" class="ai-icon" />
+    </div>
+
+    <nav class="navbar" id="nav-links">
+      <!-- Navigation links -->
+      <a href="/en/home.html" style="--i: 1">Home</a>
+      <a href="/en/about.html" style="--i: 2">About</a>
+      <a href="/en/services.html" style="--i: 3">Services</a>
+      <a href="/en/projects.html" style="--i: 5">Projects</a>
+      <a href="/en/contact.html" style="--i: 6">Contact</a>
+      <a href="/fr/accueil.html" style="--i: 7">Français</a>
+      <a href="/en/login-en.html" style="--i: 8">Login</a>
+    </nav>
+
+    <!-- Hamburger icon -->
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <i class="bx bx-menu"></i>
+    </div>
+  </header>
+
+  <!-- Home section with background video -->
+  <section class="home">
+    <div class="bloc">
+      <video src="/assets/video/programmeur.mp4" autoplay muted loop preload="auto">
+        <track kind="captions" src="/assets/captions.vtt" srclang="en" label="English">
+      </video>
+      <p class="video-description">Video showing Christian Grohens coding, illustrating his passion for web development.
+      </p>
+      <div class="home-content">
+        <!-- Home section content -->
+        <h1>Hello, I'm</h1>
+        <h2>Christian Grohens</h2>
+        <h3>I am a <span class="text"></span></h3>
+        <p>
+          I am a Web Developer with several years of experience.
+          <br />My expertise includes creating websites, designing user
+          interfaces, and much more.
+        </p>
+        <a href="/en/about.html" class="btn-box">More About Me</a>
       </div>
-    </section>
-    <!-- Footer with copyright and license link -->
-    <footer class="footer">
-      <p>&copy; 2024 JavaChrist. Tous droits réservés.</p>
-      <div>
-        <a href="/en/legal-notice.html" class="license-link">
-          Légales notice |
-        </a>
-        <a href="/en/privacy-policy.html" class="license-link"
-          >Privacy policy</a
-        >
-      </div>
-      <div class="home-sci">
-        <a href="https://twitter.com/Mis7erC" target="_blank" style="--i: 8"
-          ><i class="bx bxl-instagram"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/javachrist/"
-          target="_blank"
-          style="--i: 9"
-          ><i class="bx bxl-linkedin"></i
-        ></a>
-        <a href="https://github.com/JavaChrist" target="_blank" style="--i: 10"
-          ><i class="bx bxl-github"></i
-        ></a>
-      </div>
-    </footer>
-    <script src="/home.js"></script>
-    <script src="/script.js"></script>
-  </body>
+    </div>
+  </section>
+  <!-- Footer with copyright and license link -->
+  <footer class="footer">
+    <p>&copy; 2024 JavaChrist. All rights reserved.</p>
+    <div>
+      <a href="/en/legal-notice.html" class="license-link">
+        Legal notice |
+      </a>
+      <a href="/en/privacy-policy.html" class="license-link">Privacy policy</a>
+    </div>
+    <div class="home-sci">
+      <a href="https://twitter.com/Mis7erC" target="_blank" rel="noopener noreferrer" style="--i: 8"><i
+          class="bx bxl-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/javachrist/" target="_blank" rel="noopener noreferrer" style="--i: 9"><i
+          class="bx bxl-linkedin"></i></a>
+      <a href="https://github.com/JavaChrist" target="_blank" rel="noopener noreferrer" style="--i: 10"><i
+          class="bx bxl-github"></i></a>
+    </div>
+  </footer>
+  <script src="/home.js"></script>
+  <script src="/script.js"></script>
+</body>
+
 </html>
