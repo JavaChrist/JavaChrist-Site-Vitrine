@@ -26,9 +26,9 @@ body {
 
 .sub-title {
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 700;
-  padding: 90px 0 0px;
+  padding: 100px 0 0px;
   color: #000000;
   position: relative;
   overflow: hidden;
@@ -37,7 +37,7 @@ body {
 
 .carousel-item {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .carousel-item img {
@@ -171,9 +171,8 @@ body {
 
 .carousel {
   position: relative;
-  width: 40%;
   max-width: 800px;
-  margin: 50px auto 0;
+  margin: 0px auto;
   overflow: hidden;
 }
 
